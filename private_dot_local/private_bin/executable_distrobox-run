@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ -e /run/.toolboxenv ]; then
+  echo "Can't run inside a Distrobox"
+  exit 1
+fi
+
+CONTAINER=""
+COMMAND=""
+
+if [ "$1" = "-c" ]; then
+  CONTAINER=$2
+  COMMAND=$3
+else
+  COMMAND=$1
+fi
+
+distrobox-enter $CONTAINER -- $COMMAND
+
