@@ -1,6 +1,0 @@
-alias dbe='distrobox enter'
-alias dbs='distrobox stop'
-alias dbl='distrobox list'
-alias dbc='distrobox create'
-alias dbr='distrobox enter --'
-alias dbrm='distrobox rm'
